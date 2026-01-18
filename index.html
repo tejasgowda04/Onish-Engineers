@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onish Engineers | Reliable Civil Engineering & Construction Solutions | Bengaluru</title>
+    <meta name="description" content="Professional civil engineering consultancy in Bengaluru. Services include structural design, Vastu planning, building renovation, 3D elevation, and construction consultation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        :root {
+            --primary: #1F2A44;
+            --secondary: #F5F7FA;
+            --accent: #B87333;
+            --grey: #E1E5EA;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: var(--secondary);
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #a3662e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184, 115, 51, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #172138;
+            transform: translateY(-2px);
+        }
+        
+        .section-padding {
+            padding: 5rem 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 1rem;
+            }
+        }
+        
+        .service-icon {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 90px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .floating-call {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-call:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-active {
+            color: var(--accent) !important;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            left: 0;
+            bottom: 0;
+        }
+        
+        .center-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(31, 42, 68, 0.9) 0%, rgba(31, 42, 68, 0.7) 100%);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+        
+        .tab-active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+            border-radius: 8px;
+        }
+        
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-md bg-primary flex items-center justify-center mr-3" style="background-color: var(--primary);">
+                        <i class="fas fa-drafting-compass text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold" style="color: var(--primary);">Onish Engineers</h1>
+                        <p class="text-xs text-gray-500">Civil Engineering Consultants</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link font-medium" style="color: var(--primary);">Home</a>
+                    <a href="#about" class="nav-link font-medium" style="color: var(--primary);">About</a>
+                    <a href="#services" class="nav-link font-medium" style="color: var(--primary);">Services</a>
+                    <a href="#why-us" class="nav-link font-medium" style="color: var(--primary);">Why Choose Us</a>
+                    <a href="#contact" class="nav-link font-medium" style="color: var(--primary);">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-xl" style="color: var(--primary);">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link font-medium py-2" style="color: var(--primary);">Home</a>
+                    <a href="#about" class="nav-link font-medium py-2" style="color: var(--primary);">About</a>
+                    <a href="#services" class="nav-link font-medium py-2" style="color: var(--primary);">Services</a>
+                    <a href="#why-us" class="nav-link font-medium py-2" style="color: var(--primary);">Why Choose Us</a>
+                    <a href="#contact" class="nav-link font-medium py-2" style="color: var(--primary);">Contact</a>
+                    <div class="pt-4 flex flex-col space-y-3">
+                        <a href="tel:+911234567890" class="btn-primary text-center py-3 px-6 rounded-md font-medium">Call Now</a>
+                        <a href="https://wa.me/911234567890?text=Hi%20Onish%20Engineers,%20I'm%20looking%20for%20civil%20engineering%20consultation.%20Please%20guide%20me." target="_blank" class="btn-secondary text-center py-3 px-6 rounded-md font-medium">WhatsApp Enquiry</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-20 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="container mx-auto px-4 py-20 md:py-28 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 fade-in-up">Reliable Civil Engineering & Construction Solutions</h1>
+                <p class="text-xl text-white mb-8 fade-in-up delay-1">Professional consultancy for residential and commercial projects in Bengaluru. From structural design to Vastu planning, we ensure quality, safety, and timely completion.</p>
+                <div class="flex flex-col sm:flex-row gap-4 fade-in-up delay-2">
+                    <a href="tel:+911234567890" class="btn-primary py-4 px-8 rounded-md font-medium text-lg text-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/911234567890?text=Hi%20Onish%20Engineers,%20I'm%20looking%20for%20civil%20engineering%20consultation.%20Please%20guide%20me." target="_blank" class="btn-secondary py-4 px-8 rounded-md font-medium text-lg text-center">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Enquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Snapshot -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 section-title">About Onish Engineers</h2>
+                    <p class="text-gray-700 mb-4">Onish Engineers is a professional civil engineering consultancy based in Bengaluru, providing reliable and innovative solutions for residential and commercial construction projects.</p>
+                    <p class="text-gray-700 mb-6">Founded by <strong>Sneha Shree C.K</strong>, a qualified civil engineer with a B.E degree, we combine technical expertise with practical experience to deliver projects that prioritize structural safety, functionality, and design excellence.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4" style="border-color: var(--accent);">
+                        <h3 class="font-bold text-lg mb-2" style="color: var(--primary);">Proprietor: Sneha Shree C.K</h3>
+                        <p class="text-gray-700 mb-2"><i class="fas fa-graduation-cap mr-2" style="color: var(--accent);"></i> B.E in Civil Engineering</p>
+                        <p class="text-gray-700"><i class="fas fa-map-marker-alt mr-2" style="color: var(--accent);"></i> Bengaluru, Karnataka, India</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-full h-96 rounded-lg overflow-hidden shadow-xl">
+                            <div class="w-full h-full flex items-center justify-center" style="background-color: var(--primary);">
+                                <i class="fas fa-drafting-compass text-white text-8xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 rounded-full overflow-hidden border-8 border-white shadow-lg">
+                            <div class="w-full h-full flex items-center justify-center" style="background-color: var(--accent);">
+                                <i class="fas fa-user-tie text-white text-5xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding" style="background-color: var(--secondary);">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title center-title">Our Services</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Material Contract</h3>
+                    <p class="text-gray-700 mb-6">Comprehensive material procurement and contract management to ensure quality materials at competitive prices for your construction project.</p>
+                    <a href="#contact" class="font-medium" style="color: var(--accent);">Learn more →</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Planning as per Vastu</h3>
+                    <p class="text-gray-700 mb-6">Architectural planning and space design that incorporates Vastu principles for positive energy flow and harmonious living spaces.</p>
+                    <a href="#contact" class="font-medium" style="color: var(--accent);">Learn more →</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Building Renovation</h3>
+                    <p class="text-gray-700 mb-6">Expert renovation services to transform and upgrade existing structures while ensuring structural integrity and modern functionality.</p>
+                    <a href="#contact" class="font-medium" style="color: var(--accent);">Learn more →</a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">3D Elevation</h3>
+                    <p class="text-gray-700 mb-6">Realistic 3D visualization of building exteriors to help you visualize the final look and make informed design decisions.</p>
+                    <a href="#contact" class="font-medium" style="color: var(--accent);">Learn more →</a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Consultation</h3>
+                    <p class="text-gray-700 mb-6">Professional advice on all aspects of construction projects, from initial planning to execution and quality control.</p>
+                    <a href="#contact" class="font-medium" style="color: var(--accent);">Learn more →</a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Structural Design</h3>
+                    <p class="text-gray-700 mb-6">Comprehensive structural design services ensuring safety, stability, and compliance with building codes and regulations.</p>
+                    <a href="#contact" class="font-medium" style="color: var(--accent);">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title center-title">Why Choose Onish Engineers</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-user-graduate" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Qualified Civil Engineer</h3>
+                                <p class="text-gray-700">Proprietor Sneha Shree C.K holds a B.E in Civil Engineering, ensuring technically sound solutions for all projects.</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-eye" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Transparent Work Process</h3>
+                                <p class="text-gray-700">Clear communication, regular updates, and honest consultation at every stage of your project.</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-shield-alt" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Structural Safety Focus</h3>
+                                <p class="text-gray-700">Prioritizing structural integrity and safety compliance in all our designs and construction oversight.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-calendar-check" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Timely Completion</h3>
+                                <p class="text-gray-700">Efficient project management and planning to ensure your project stays on schedule.</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-handshake" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Honest Consultation</h3>
+                                <p class="text-gray-700">Practical, unbiased advice that respects your budget while maintaining quality standards.</p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-home" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Residential Expertise</h3>
+                                <p class="text-gray-700">Specialized focus on individual homes, renovations, and small commercial projects.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <section class="py-12" style="background-color: var(--primary);">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+                    <p class="text-gray-300">Contact us today for a free consultation and quote.</p>
+                </div>
+                <div>
+                    <a href="https://wa.me/911234567890?text=Hi%20Onish%20Engineers,%20I'm%20looking%20for%20civil%20engineering%20consultation.%20Please%20guide%20me." target="_blank" class="btn-primary py-4 px-8 rounded-md font-medium text-lg inline-block">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Enquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title center-title">Contact Us</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--primary);">Get in Touch</h3>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-phone-alt" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Call Us</h4>
+                                <a href="tel:+911234567890" class="text-gray-700 hover:text-accent transition-colors">+91 12345 67890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-envelope" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Email</h4>
+                                <a href="mailto:contact@onishengineers.com" class="text-gray-700 hover:text-accent transition-colors">contact@onishengineers.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4" style="background-color: rgba(184, 115, 51, 0.1);">
+                                <i class="fas fa-map-marker-alt" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Office Address</h4>
+                                <p class="text-gray-700">Bengaluru, Karnataka, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simple Contact Form -->
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-lg mb-4" style="color: var(--primary);">Quick Enquiry</h4>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2" style="border-color: var(--grey); focus:ring-color: var(--accent);">
+                            </div>
+                            <div class="mb-4">
+                                <input type="tel" id="phone" placeholder="Phone Number" class="w-full p-3 border rounded-md focus:outline-none focus:ring-2" style="border-color: var(--grey); focus:ring-color: var(--accent);">
+                            </div>
+                            <button type="button" onclick="submitForm()" class="btn-primary w-full py-3 rounded-md font-medium">
+                                Request Call Back
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--primary);">Our Location</h3>
+                    <div class="map-container mb-6">
+                        <!-- Google Maps Embed -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7748958432!2d77.35072986812353!3d12.95445954093321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1689604972875!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-lg mb-4" style="color: var(--primary);">Business Hours</h4>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between">
+                                <span class="text-gray-700">Monday - Friday</span>
+                                <span class="font-medium">9:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-gray-700">Saturday</span>
+                                <span class="font-medium">10:00 AM - 4:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-gray-700">Sunday</span>
+                                <span class="font-medium">By Appointment</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8" style="background-color: var(--primary);">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-md flex items-center justify-center mr-3" style="background-color: rgba(255, 255, 255, 0.1);">
+                            <i class="fas fa-drafting-compass text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white">Onish Engineers</h2>
+                            <p class="text-sm text-gray-300">Civil Engineering Consultants</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">Professional civil engineering consultancy in Bengaluru</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="tel:+911234567890" class="text-white hover:text-accent transition-colors">
+                        <i class="fas fa-phone-alt text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/911234567890?text=Hi%20Onish%20Engineers,%20I'm%20looking%20for%20civil%20engineering%20consultation.%20Please%20guide%20me." target="_blank" class="text-white hover:text-accent transition-colors">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="mailto:contact@onishengineers.com" class="text-white hover:text-accent transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p class="text-gray-400 text-sm">© 2023 Onish Engineers. All rights reserved.</p>
+                <p class="text-gray-400 text-sm mt-1">Bengaluru, Karnataka, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/911234567890?text=Hi%20Onish%20Engineers,%20I'm%20looking%20for%20civil%20engineering%20consultation.%20Please%20guide%20me." target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+    
+    <a href="tel:+911234567890" class="floating-call">
+        <i class="fas fa-phone-alt text-white text-2xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Update active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        function highlightNavLink() {
+            let scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('nav-active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('nav-active');
+                        }
+                    });
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', highlightNavLink);
+        
+        // Simple form submission
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!name || !phone) {
+                alert('Please enter your name and phone number.');
+                return;
+            }
+            
+            // Create WhatsApp message
+            const message = `Hi Onish Engineers, I'm ${name}. My phone number is ${phone}. I'm looking for civil engineering consultation. Please guide me.`;
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/911234567890?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+            
+            // Show success message
+            alert('Thank you! You will be redirected to WhatsApp to send your enquiry.');
+        }
+        
+        // Add fade-in animation to elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
